@@ -82,12 +82,11 @@
                     height:      '100%',
                     overflowY:   'auto',
                     zIndex:      10000,
-                    opacity:     1,
                     display:     'block'
                 }
             print_modal
                 .css(css)
-                .animate({ top: $(window).scrollTop(), opacity: 1}, 400, 'linear', function() {
+                .animate({ top: $(window).scrollTop()}, 400, 'linear', function() {
                     print_controls.fadeIn('slow').focus();
                 });
             print_frame.height($('body', print_frame.contents())[0].scrollHeight);
