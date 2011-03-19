@@ -1,0 +1,104 @@
+/**
+ * Example Print Preview site
+ *
+ *	print.css
+ *	author: Tim Connell
+ */
+
+/* -- Hide screen specific elements -- */
+#nav,
+#footer .footer-links,
+#feature a.prev,
+#feature a.next,
+a.print-preview {
+    display: none;
+}
+
+
+/* -- Typography -- */
+body {
+    background: #FFF;
+    color: #000;
+    font-family: Georgia, serif;
+    line-height: 1.2;
+}
+
+p, table, ul, ol, dl, blockquote, pre, code, form {
+    margin: 0 0 1em;
+}
+
+h1,h2,h3,h4,h5 {
+    font-weight: normal;
+    margin: 2em 0 0.5em;
+    text-shadow: rgba(0, 0, 0, 0.44) 1px 1px 2px;
+}
+
+h1 { font-size: 2em; margin: 2em 0 0.25em; }
+h2 { font-size:1.7em; }
+h3 { font-size:1.5em; }
+h4 { font-size:1.2em; }
+h5 { font-size:1em; }
+
+
+/* -- To comment -- */
+#header strong {
+    color: #000;
+    display: block;
+    font-weight: normal;
+    font-size: 3em;
+    margin: 0 0 1em;
+    padding: 0;
+    text-shadow: rgba(0, 0, 0, 0.44) 1px 1px 2px;
+}
+    
+
+
+#content:before {
+    content: "Thank you for printing this page. Do come back to foo.tld, we are constantly adding new and interesting articles and tutorials. Note: To help the environment we have automatically removed navigaton and other unessessary elements from the page.";
+    display: block;
+    border: 1px solid #ccc;
+    font-style: italic;
+    margin: 0 0 1em;
+    padding: 8px 10px;
+}
+
+a:link:after,
+a:visited:after {
+  content: " (" attr(href) ") ";
+  font-size: 80%;
+}
+
+/* -- Print Preview --*/
+#print-modal-mask,
+#print-modal {
+    display: none !important;
+}
+
+/* -- Accommodate JS driven elements --*/
+#feature > div {
+    border: none;
+    overflow: visible;
+    height: auto;
+}
+
+    #feature div.items {
+        left: auto !important;
+        position: relative;
+        overflow: visible;
+        width: auto;
+    }
+
+    #feature div.items div {
+        float: none;
+        margin: 20px 0;
+        position: relative;
+    }
+
+/* -- Hide screen specific elements -- */
+#nav,
+#footer .footer-links,
+#feature a.prev,
+#feature a.next,
+a.print-preview {
+    display: none;
+}
