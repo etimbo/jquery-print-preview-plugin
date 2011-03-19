@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Print Preview Example Page</title>
+    <link rel="stylesheet" href="css/960.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+    <link rel="stylesheet" href="../src/css/print-preview.css" type="text/css" media="screen">
+    <script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+    <script src="../src/jquery.print-preview.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#feature > div").scrollable({interval: 2000}).autoscroll();
+            
+            $('#aside').prepend('<a class="print-preview">Print this page</a>');
+            $('a.print-preview').printPreview();
+        });
+    </script>
+</head>
+<body>                
+
+<div id="header" class="container_12">
+    <strong>Lorem ipsum dolor sit amet</strong>
+</div>
+
+<div id="content" class="container_12 clearfix">
+
+    <div id="content-main" class="grid_8">
+        <h1>Sed do eiusmod tempor</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div id="feature">
+            <a class="prev disabled">L</a>
+            <div>
+                <div class="items">
+                    <!-- <div><img src="http://flickholdr.com/620/175/dark" alt="" /></div>
+                    <div><img src="http://flickholdr.com/620/175/black" alt="" /></div>
+                    <div><img src="http://flickholdr.com/620/175/doom" alt="" /></div>
+                    <div><img src="http://flickholdr.com/620/175/red" alt="" /></div> -->
+                    <div><img src="images/feature-1.jpg" alt="" /></div>
+                    <div><img src="images/feature-2.jpg" alt="" /></div>
+                    <div><img src="images/feature-3.jpg" alt="" /></div>
+                    <div><img src="images/feature-4.jpg" alt="" /></div>
+                </div>
+            </div>
+            <a class="next">R</a>
+        </div>
+        <h2>Labore et dolore magna</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="gallery">
+            <div class="items">
+                <div><img src="images/gallery-1.jpg" alt="" /></div>
+                <div><img src="images/gallery-2.jpg" alt="" /></div>
+                <div><img src="images/gallery-3.jpg" alt="" /></div>
+                <div><img src="images/gallery-4.jpg" alt="" /></div>
+            </div>
+        </div>
+        
+        <h2>Pellentesque habitant morbi</h2>
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    </div>
+
+    <div id="aside" class="grid_3 push_1">
+        <div id="nav">
+            <h2>Consectetur adipisicing</h2>
+            <ul>
+                <li><a href="http://designfestival.com">Lorem</a></li>
+                <li><a href="http://designfestival.com">Ipsum dollar</a></li>
+                <li><a href="http://designfestival.com">Sit amet consectetur</a></li>
+                <li><a href="http://designfestival.com">Sed do eiusmod</a></li>
+                <li><a href="http://designfestival.com">Tempor incididunt</a></li>
+            </ul>
+        </div>
+        
+        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+    </div>
+</div>
+
+<div id="footer" class="container_12">
+    <div class="grid_6">
+        <p class="footer-links"><a href="#">Aliquam</a> | <a href="#">Iincidunt</a> | <a href="#">Mauris eu risus</a> | <a href="#">Consectetur</a></p>
+    </div>
+    <div class="grid_6">
+        <p>&copy; All images copyright to their respective owners - courtousy of <a href="http://flickholdr.com/">http://flickholdr.com/</a></p>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+/**
+ * Example Print Preview site
+ *
+ *	screen.css
+ *	author: Tim Connell
+ */
+
+/* 
+ *	Table of contents
+ *
+ *		1. General
+ *			1.1 Reset
+ *			1.2 General Typography
+ *			1.3 Headings
+ *			1.4 Links
+ *			1.5 Lists
+ *			1.6 Tables
+ *          1.7 Froms
+ *          1.8 Images
+ * /
+
+
+ /*
+  --------------------
+  1. General
+  --------------------
+  */
+
+ /* -- 1.1 Reset -- */
+ html, body, blockquote, pre, abbr, acronym, address, code,
+ em, img, dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   vertical-align: baseline;
+ }
+
+ /* Unordered lists for good not evil */
+ ul {
+ 	list-style: none;
+ } 
+
+ /* Tables still need 'cellspacing="0"' in the markup. */
+ table { border-collapse: separate; border-spacing: 0; }
+ caption, th, td { text-align: left; font-weight: normal; }
+ table, td, th { vertical-align: middle; }
+
+ /* Remove possible quote marks (") from <q>, <blockquote>. */
+ blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+ blockquote, q { quotes: "" ""; }
+
+ /* Remove annoying border on linked images. */
+ a img { border: none; }
+
+
+ /*-- 1.2 General Typography --*/
+ body {
+     color: #FFF;
+     font: 87.5%/1.5 Arial, sans-serif;
+ }
+
+ hr,
+ div.hr {
+    background: #d3d3d3;
+    border: none;
+    clear: both;
+    height: 3px;
+    margin: 1.5em 0;
+ }
+
+ .js-enabled hr {
+     display: none;
+ }
+
+ #content p, #content table, #content-main ul, #content ol, #content dl {
+     margin: 0 0 1em;
+ }
+
+
+ /*-- 1.3 Headings --*/
+ h1,h2,h3,h4,h5 {
+     font-size: 1em;
+     font-weight: normal;
+     margin: 2em 0 1em;
+ }
+
+ h1 {
+     color: #FFF;
+     font-size: 2em;
+     margin: 0 0 0.25em;
+ }
+
+ h2 {
+     color: #FFF;
+     font-size: 1.58em;
+ }
+
+ h3 {
+     color: #FFF;
+     font-size: 1.58em;
+ }
+
+ h4 {
+     color: #FFF;
+     font-size: 1.58em;
+ }
+
+ h5 {
+     color: #FFF;
+     font-size: 1.42em;
+ }
+
+ /* -- 1.4 Links -- */
+a {
+     color: #FCFEFF;
+     text-decoration: underline;
+ }
+
+a:hover,
+a:focus {
+     color: #FCFEFF;
+ }
+
+
+ /*-- 1.8 Images --*/
+img {
+     border: 1px solid #cecccc;
+ }
+ .align-left {
+     float: left;
+     margin: 0 20px 10px 0;
+     padding: 1px;
+ }
+
+ .align-right {
+     float: right;
+     margin: 0 0 10px 20px;
+     padding: 1px;
+ }
+
+ div.image {
+     border: 1px solid #ccc;
+     margin: 1em 0;
+     overflow: hidden;
+     width: 389px;
+ }
+
+     #content-main div.image img {
+         border: none;
+         display: block;
+     }
+
+     div.image div.caption {
+         margin: -1px 0 0;
+         padding: 15px 20px;
+     }
+
+
+/*
+ --------------------
+ 2. Page Eelemnts
+ --------------------
+ */
+
+/*-- 2.1 Page structure --*/
+body {
+    background: #4A525A;
+}
+
+#footer {
+    font-size: 0.85em;
+    margin-top: 40px;
+}
+    
+    #footer .footer-links {
+        margin-left:-10px;
+    }
+
+        #footer .footer-links a {
+            margin: 0 10px;
+        }
+
+/* -- 2.1 Header -- */
+#header {
+    padding: 60px 0 40px;
+}
+
+#header strong {
+    color: #FCFEFF;
+    display: block;
+    font-weight: normal;
+    font-size: 3em;
+    margin: 0 10px;
+    text-shadow: rgba(0, 0, 0, 0.44) 1px 1px 2px;
+}
+
+/*-- 2.3 Aside --*/
+#aside {
+    margin-top: 1em;
+}
+
+    #aside h2 {
+        font-size: 1.3em;
+        margin: 0 0 0.25em;
+    }
+    
+    #aside ul {
+        margin: 0 0 2em;
+    }
+    
+/*
+ --------------------
+ 3. Content Eelemnts
+ --------------------
+ */
+ 
+#feature {
+    position: relative;
+    margin: 20px 0;
+}
+
+    #feature > div {
+        border: 1px solid #cecccc;
+        position:relative;
+        margin: 0 -1px;
+    	overflow:hidden;
+    	height: 175px;
+    	width: 620px;
+    }
+    
+     #feature div.items {
+         position:absolute;
+         width:20000em;
+     }
+     
+         #feature div.items div {
+            float: left;
+         }
+         
+        #feature div.items img {
+            border: none;
+        }
+ 
+     #feature .next,
+     #feature .prev {
+         cursor: pointer;
+         display: block;
+         font-size: 30px;
+         line-height: 1;
+         position: absolute;
+         margin-top: -15px;
+         right: -40px;
+         top: 50%;
+         text-decoration: none;
+         text-shadow: rgba(0, 0, 0, 0.75) 1px 1px 2px;
+     }
+
+     #feature .prev {
+         left: -35px;
+         right: auto;
+     }
+     
+     #feature a.disabled {
+         color: #BBB;
+         cursor: auto;
+     }
+
+/*-- 3.1 Gallery --*/
+.gallery {
+    overflow: hidden;
+    margin: 20px -10px;
+}
+
+    .gallery div div {
+        float: left;
+        margin: 0 10px;
+    }
+
+    .gallery img {
+        display: block;
+        margin: 0 -1px;
+    }
+    
+/* -- 3.X Print preview -- */
+a.print-preview {
+    background: url(images/icon-print-preview.png) no-repeat 0 0;
+    cursor: pointer;
+    display: block;
+    margin: -42px 0 20px;
+    padding: 0 0 0 35px;
+    line-height: 20px;
+}
