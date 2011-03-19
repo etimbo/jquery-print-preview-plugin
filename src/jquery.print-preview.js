@@ -39,7 +39,7 @@
             print_controls = $('<div id="print-modal-controls">' + 
                                     '<a href="#" class="print" title="Print page">Print page</a>' +
                                     '<a href="#" class="close" title="Close print preview">Close</a>').hide();
-            var print_frame = $('<iframe id="print-modal-content" scrolling="no" border="0" name="print-frame" />');
+            var print_frame = $('<iframe id="print-modal-content" scrolling="no" border="0" frameborder="0" name="print-frame" />');
 
             // Raise print preview window from the dead, zooooooombies
             print_modal
@@ -74,6 +74,9 @@
 
             // Disable scrolling
             $('body').css({overflowY: 'hidden', height: '100%'});
+            $('img', print_frame_ref).load(function() {
+                print_frame.height($('body', print_frame.contents())[0].scrollHeight);
+            });
             
             // Position modal            
             starting_position = $(window).height() + $(window).scrollTop();
@@ -164,8 +167,3 @@
         }
     }
 })(jQuery);
-
-$(function() {
-    $('body').prepend('<a href="#" class="print-preview">Print preview</a>');
-    $('a.print-preview').printPreview().hide();
-});
