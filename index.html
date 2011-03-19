@@ -11,17 +11,18 @@
       background-color: #4A525A;
       font-family: Helvetica, Arial, FreeSans, san-serif;
       color: #ffffff;
+      line-height: 1.2;
     }
     #container {
       margin: 0 auto;
       width: 700px;
     }
-    h1 { font-size: 3.8em; color: #b5ada5; margin-bottom: 3px; }
+    h1 { font-size: 3.8em; color: #FFF; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #b5ada5; }
-    h3 { text-align: center; color: #b5ada5; }
-    a { color: #b5ada5; }
+    h2 { font-size: 1.5em; color: #FFF; }
+    h3 { text-align: center; color: #FFF; }
+    a { color: #FFF; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
@@ -42,26 +43,34 @@
         <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
     </div>
 
-    <h1><a href="http://github.com/etimbo/jquery-print-preview-plugin">jquery-print-preview-plugin</a>
-      <span class="small">by <a href="http://github.com/etimbo">etimbo</a></span></h1>
+    <h1><a href="http://github.com/etimbo/jquery-print-preview-plugin">jquery-print-preview-plugin</a></h1>
 
     <div class="description">
       jQuery plugin for print preview (modal window)
     </div>
 
-    <p>The jQuery Print Preview plugin is designed to provide visitors with a preview of the print version of a web site. Unlike a popup window this plugin brings in all content and print styles within a modal window.</p><h2>Dependencies</h2>
-<p>jQuery - http://www.jquery.com
-A print stylesheet on your web site</p>
-<h2>Install</h2>
-<p>1.
-2.
-3.</p>
+    <p>The jQuery Print Preview plugin is designed to provide visitors with a preview of the print version of a web site. Unlike a popup window this plugin brings in all content and print styles within a modal window.</p>
+    <h2>Dependencies</h2>
+    <p>jQuery + a print stylesheet</p>
+    <h2>Usage</h2>
+    <ol>
+        <li>Include the CSS and iamges from src/css into your screen stylesheet.</li>
+        <li>Include src/jquery.print-preview.js</li>
+        <li>Add a print preview link and initalise the plugin like so
+            <code>
+<pre>
+$('#foo').prepend('<a class="print-preview">Print this page</a>');
+$('a.print-preview').printPreview();
+</pre>
+            </code>
+        </li>
+    </ol>
 <h2>License</h2>
-<p>Copyright 2011, Tim Connell
-Licensed under the GPL Version 2 license
-http://www.gnu.org/licenses/gpl-2.0.html</p>
+<p>Copyright 2011, Tim Connell<br />
+Licensed under the GPL Version 2 license<br />
+<a href="http://www.gnu.org/licenses/gpl-2.0.html">http://www.gnu.org/licenses/gpl-2.0.html</a></p>
 <h2>Authors</h2>
-<p>Tim Connell, released in conjunction with Design Festival.<br/><br/>      </p>
+<p>Tim Connell, released in conjunction with <a href="http://designfestival.com">Design Festival</a>.</p>
 
 
     <h2>Download</h2>
