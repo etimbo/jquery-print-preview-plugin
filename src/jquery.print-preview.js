@@ -68,6 +68,18 @@
             $('a', print_frame_ref).bind('click.printPreview', function(e) {
                 e.preventDefault();
             });
+            
+            // Introduce print styles
+            $('head').append('<style type="text/css">' +
+                '@media print {' +
+                    '/* -- Print Preview --*/' +
+                    '#print-modal-mask,' +
+                    '#print-modal {' +
+                        'display: none !important;' +
+                    '}' +
+                '}' +
+                '</style>'
+            );
 
             // Load mask
             $.printPreview.loadMask();

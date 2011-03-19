@@ -68,12 +68,6 @@ a:visited:after {
   font-size: 80%;
 }
 
-/* -- Print Preview --*/
-#print-modal-mask,
-#print-modal {
-    display: none !important;
-}
-
 /* -- Accommodate JS driven elements --*/
 #feature > div {
     border: none;
