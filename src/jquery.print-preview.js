@@ -20,13 +20,6 @@
 			    }
 			});
 		});
-        $(document).bind('keydown', function(e) {
-            var code = (e.keyCode ? e.keyCode : e.which);
-            if (code == 80 && !$('#print-modal').length) {
-                $.printPreview.loadPrintPreview($(this));
-                return false;
-            }            
-        });
 		return this;
 	};
     
