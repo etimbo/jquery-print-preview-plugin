@@ -40,7 +40,7 @@ h4 { font-size:1.2em; }
 h5 { font-size:1em; }
 
 
-/* -- To comment -- */
+/* -- Style site heading -- */
 #header strong {
     color: #000;
     display: block;
@@ -52,7 +52,7 @@ h5 { font-size:1em; }
 }
     
 
-
+/* -- Add message re print -- */
 #content:before {
     content: "Thank you for printing this page. Do come back to foo.tld, we are constantly adding new and interesting articles and tutorials. Note: To help the environment we have automatically removed navigaton and other unessessary elements from the page.";
     display: block;
@@ -66,7 +66,9 @@ a:link:after,
 a:visited:after {
   content: " (" attr(href) ") ";
   font-size: 80%;
+  text-decoration: none;
 }
+
 
 /* -- Accommodate JS driven elements --*/
 #feature > div {
@@ -88,11 +90,21 @@ a:visited:after {
         position: relative;
     }
 
-/* -- Hide screen specific elements -- */
-#nav,
-#footer .footer-links,
-#feature a.prev,
-#feature a.next,
-a.print-preview {
-    display: none;
+/* -- Photo galleries -- */
+div.gallery {
+    margin: 1em 0;    
+    overflow: hidden;
+}
+
+    div.gallery div.items div {
+        float: left;
+        margin-right: 10px;
+    }
+    
+/* -- Footer -- */
+#footer {
+    border-top: 1px solid #cecece;
+    font-size: 0.83em;
+    margin: 2em 0 0;
+    padding: 1em 0 0;
 }

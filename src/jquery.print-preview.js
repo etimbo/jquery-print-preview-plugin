@@ -16,7 +16,7 @@
 			$(this).bind('click', function(e) {
 			    e.preventDefault();
 			    if (!$('#print-modal').length) {
-			        $.printPreview.loadPrintPreview($(this));
+			        $.printPreview.loadPrintPreview();
 			    }
 			});
 		});
@@ -26,7 +26,7 @@
     // Private functions
     var mask, size, print_modal, print_controls;
     $.printPreview = {
-        loadPrintPreview: function(trigger) {
+        loadPrintPreview: function() {
             // Declare DOM objects
             print_modal = $('<div id="print-modal"></div>');
             print_controls = $('<div id="print-modal-controls">' + 
