@@ -3,14 +3,17 @@ The jQuery Print Preview plugin is designed to provide visitors with a preview o
 Unlike traditional print previews this plugin brings in all content and print styles within a modal window.
 
 [Check out the demo](http://etimbo.github.com/jquery-print-preview-plugin/example/index.html)
+
 ## Usage
 Prerequisites:
 
 - [jQuery](http://jquery.com/)
 - A print stylesheeet with a media="print" attribute
 
+Using the plugin:
+
 1. Pour in plugin CSS
-1. Add a print preview link and initalise the plugin like so
+2. Add a print preview link and initalise the plugin like so
 
     ``$('#foo').prepend('Print this page');
     $('a.print-preview').printPreview();``
