@@ -1,11 +1,11 @@
 /*!
- * jQuery Print Previw Plugin v0.1
+ * jQuery Print Previw Plugin v1.0
  *
  * Copyright 2011, Tim Connell
  * Licensed under the GPL Version 2 license
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Date: Sun Mar 25 00:00:00 2011 -000 - v1.01
+ * Date: Sun Mar 25 00:00:00 2011 -000
  */
  
 (function($) { 
