@@ -26,7 +26,7 @@ Using the plugin:
 
 ## Authors
 Developed by Tim Connell.
-Released in conjunction with [Design Festival](http://designfestival.com/).
+Released in conjunction with [Sitepoint/Design Festival](http://designfestival.com/when-visitors-print-about-that-print-stylesheet/).
 
 ## Licence
 Copyright 2011, Tim Connell
