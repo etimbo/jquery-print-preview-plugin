@@ -57,10 +57,23 @@
             print_frame_ref.close();
             
             // Grab contents and apply stylesheet
-            $('body', print_frame_ref).html($('body > *:not(#print-modal):not(script)').clone());
-            $('head link[media*=print], head link[media=all]').each(function() {
-                $('head', print_frame_ref).append($(this).clone().attr('media', 'all'));
+            var $iframe_head = $('head link[media*=print], head link[media=all]').clone(),
+                $iframe_body = $('body > *:not(#print-modal):not(script)').clone();
+            $iframe_head.each(function() {
+                $(this).attr('media', 'all');
             });
+            if (!$.browser.msie && !($.browser.version < 7) ) {
+                $('head', print_frame_ref).append($iframe_head);
+                $('body', print_frame_ref).append($iframe_body);
+            }
+            else {
+                $('body > *:not(#print-modal):not(script)').clone().each(function() {
+                    $('body', print_frame_ref).append(this.outerHTML);
+                });
+                $('head link[media*=print], head link[media=all]').each(function() {
+                    $('head', print_frame_ref).append($(this).clone().attr('media', 'all')[0].outerHTML);
+                });
+            }
             
             // Disable all links
             $('a', print_frame_ref).bind('click.printPreview', function(e) {
