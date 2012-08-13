@@ -26,6 +26,7 @@
     // Private functions
     var mask, size, print_modal, print_controls;
     $.printPreview = {
+        close_cb: function(){},
         loadPrintPreview: function() {
             // Declare DOM objects
             print_modal = $('<div id="print-modal"></div>');
@@ -126,6 +127,7 @@
     	},
     	
     	distroyPrintPreview: function() {
+    	    var self = this;
     	    print_controls.fadeOut(100);
     	    print_modal.animate({ top: $(window).scrollTop() - $(window).height(), opacity: 1}, 400, 'linear', function(){
     	        print_modal.remove();
@@ -133,6 +135,7 @@
     	    });
     	    mask.fadeOut('slow', function()  {
     			mask.remove();
+    			self.close_cb.call(self);
     		});				
 
     		$(document).unbind("keydown.printPreview.mask");
