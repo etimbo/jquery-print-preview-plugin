@@ -18,6 +18,18 @@ Using the plugin:
     ``$('#foo').prepend('Print this page');
     $('a.print-preview').printPreview();``
 
+Properties:
+
+    close_cb - Add a function callback that is called when the preview is closed.
+
+    Example:
+      $('a.preview').bind('click', function(e) {
+          e.preventDefault();
+          var pp = jQuery.printPreview;
+          pp.close_cb = function(){ alert('all done') };
+          pp.loadPrintPreview();
+      });
+
 ## Supported Browsers
 - Internet Explorer 6, 7, 8 and 9
 - Safari
