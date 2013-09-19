@@ -6,15 +6,10 @@
     <link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
     <link rel="stylesheet" href="../src/css/print-preview.css" type="text/css" media="screen">
-    <script src="http://cdn.jquerytools.org/1.2.5/full/jquery.tools.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="../src/jquery.print-preview.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript">
         $(function() {
-            /*
-             * Initialise example carousel
-             */
-            $("#feature > div").scrollable({interval: 2000}).autoscroll();
-            
             /*
              * Initialise print preview plugin
              */
@@ -45,20 +40,11 @@
         <h1>Sed do eiusmod tempor</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         <div id="feature">
-            <a class="prev disabled">L</a>
             <div>
                 <div class="items">
-                    <!-- <div><img src="http://flickholdr.com/620/175/dark" alt="" /></div>
-                    <div><img src="http://flickholdr.com/620/175/black" alt="" /></div>
-                    <div><img src="http://flickholdr.com/620/175/doom" alt="" /></div>
-                    <div><img src="http://flickholdr.com/620/175/red" alt="" /></div> -->
                     <div><img src="images/feature-1.jpg" alt="" /></div>
-                    <div><img src="images/feature-2.jpg" alt="" /></div>
-                    <div><img src="images/feature-3.jpg" alt="" /></div>
-                    <div><img src="images/feature-4.jpg" alt="" /></div>
                 </div>
             </div>
-            <a class="next">R</a>
         </div>
         <h2>Labore et dolore magna</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
