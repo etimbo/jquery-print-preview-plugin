@@ -1,6 +1,6 @@
 # jQuery Print Preview plugin
 ## 9-18-13 Updates
-- Updated correct for $.browser being deprecated in jQuery 1.9 (side-effect: removed support for IE 7 & below)
+- Updated for $.browser being deprecated in jQuery 1.9 (side-effect: removed support for IE 7 & below)
 - Updated demo file to use jQuery 1.10.2 & removed carousel which was dependent on the jquerytools library that was previously being used. 
 
 The jQuery Print Preview plugin is designed to provide visitors with a preview of the print version of a web site.
